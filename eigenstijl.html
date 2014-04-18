@@ -16,8 +16,8 @@
 			top: 0;
 			right: 0;
 			bottom: 0;
-			width: 100%;
-			height: 100%;
+			width: 2560px;
+			height: 400px;
 			background: #EEE;
 		}
 	</style>
@@ -41,7 +41,7 @@
   			map = new google.maps.Map(document.getElementById('googlemaps'), mapOptions);
 
   			setStyles();
-  			setMarkers();
+  			//setMarkers();
 		}
 
 
@@ -54,6 +54,12 @@
 						"featureType": "administrative",
 						"stylers": [
 							{ "visibility": "off" }
+						]
+					},{
+						"featureType": "administrative.locality",
+						"stylers": [
+							{ "visibility": "on" }
+							//{ "color": "#000000" }
 						]
 					},{
 						"featureType": "administrative.country",
@@ -78,13 +84,18 @@
 					},{
 						"featureType": "landscape",
 						"stylers": [
-							{ "color": "#53c8f1" }
+							{ "color": "#e2dad4" },
+							// { "hue": "#ded4cd" },
+						 // 	{ "saturation": -21 },
+						 // 	{ "lightness": -12 },
+							// { "gamma": 0 },
+						    //{ "invert_lightness": true }
 						]
 					},{
 						"featureType": "water",
 						"stylers": [
 							{ "visibility": "on" },
-							{ "color": "#FFFFFF" }
+							{ "color": "#fcfaf9" }
 						]
 					}
 				],
